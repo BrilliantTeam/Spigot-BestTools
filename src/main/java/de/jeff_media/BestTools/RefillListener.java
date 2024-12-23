@@ -67,7 +67,9 @@ public class RefillListener implements Listener {
 
         int refillSlot = RefillUtils.getMatchingStackPosition(inv, mat, offHand ? 45 : inv.getHeldItemSlot());
         if (refillSlot != -1) {
-            main.refillUtils.refillStack(inv, refillSlot, offHand ? 40 : currentSlot, inv.getItem(refillSlot));
+            p.getScheduler().run(Main.getInstance(), (ignored) -> {
+                main.refillUtils.refillStack(inv, refillSlot, offHand ? 40 : currentSlot, inv.getItem(refillSlot));
+            }, null);
         }
     }
 }

@@ -57,19 +57,17 @@ public class RefillUtils {
     }
 
     void refillStack(Inventory inv, int source, int dest, ItemStack stack) {
-        Bukkit.getScheduler().runTask(main, () -> {
-            if(inv.getItem(source)==null) return;
-            if(!inv.getItem(source).equals(stack)) {
-                main.debug("Refill failed, because source ItemStack has changed. Aborting Refill to prevent item loss.");
-                return;
-            }
-            if(inv.getItem(dest)!=null && !moveBowlsAndBottles(inv,dest)) {
-                main.debug("Refill failed, because destination slot is not empty anymore. Aborting Refill to prevent item loss.");
-                return;
-            }
-            inv.setItem(source, null);
-            inv.setItem(dest, stack);
-        });
+        if(inv.getItem(source)==null) return;
+        if(!inv.getItem(source).equals(stack)) {
+            main.debug("Refill failed, because source ItemStack has changed. Aborting Refill to prevent item loss.");
+            return;
+        }
+        if(inv.getItem(dest)!=null && !moveBowlsAndBottles(inv,dest)) {
+            main.debug("Refill failed, because destination slot is not empty anymore. Aborting Refill to prevent item loss.");
+            return;
+        }
+        inv.setItem(source, null);
+        inv.setItem(dest, stack);
     }
 
     static int getMatchingStackPosition(PlayerInventory inv, Material mat, int currentSlot) {

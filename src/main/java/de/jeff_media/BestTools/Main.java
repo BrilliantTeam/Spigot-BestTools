@@ -120,7 +120,6 @@ public class Main extends JavaPlugin {
         playerdataFolder.mkdir();
 
         if(reload) {
-            updateChecker.stop();
             HandlerList.unregisterAll(this);
             reloadConfig();
 
@@ -134,11 +133,6 @@ public class Main extends JavaPlugin {
 
         loadDefaultValues();
 
-        updateChecker = new UpdateChecker(this, UpdateCheckSource.SPIGOT, "81490")
-            //.setDownloadLink("https://www.spigotmc.org/resources/besttools.81490/")
-            //.setChangelogLink("https://github.com/JEFF-Media-GbR/Spigot-BestTools/blob/master/CHANGELOG.md")
-            .setDonationLink("https://www.chestsort.de/donate")
-            .suppressUpToDateMessage(true);
         toolHandler = new BestToolsHandler(this);
         toolUtils = new BestToolsUtils(this);
         refillListener = new RefillListener(this);
@@ -175,10 +169,10 @@ public class Main extends JavaPlugin {
         registerMetrics();
 
         if (getConfig().getString("check-for-updates", "true").equalsIgnoreCase("true")) {
-            updateChecker.checkEveryXHours(getConfig().getInt("check-interval")).checkNow();
+            
         } // When set to on-startup, we check right now (delay 0)
         else if (getConfig().getString("check-for-updates", "true").equalsIgnoreCase("on-startup")) {
-            updateChecker.checkNow();
+
         }
 
     }
