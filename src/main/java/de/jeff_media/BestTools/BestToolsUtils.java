@@ -555,14 +555,6 @@ public class BestToolsUtils {
         }
 
         // This is fairly expensive, but 2ms vs 8ms isn't a meaningful difference.
-        try {
-            tagToMap(Tag.MINEABLE_AXE, Tool.AXE);
-            tagToMap(Tag.MINEABLE_HOE, Tool.HOE);
-            tagToMap(Tag.MINEABLE_PICKAXE, Tool.PICKAXE);
-            tagToMap(Tag.MINEABLE_SHOVEL, Tool.SHOVEL);
-        } catch (NoSuchFieldError | NoClassDefFoundError ignored) {
-        }
-
 
         long endTime = System.nanoTime();
         //printMap();
