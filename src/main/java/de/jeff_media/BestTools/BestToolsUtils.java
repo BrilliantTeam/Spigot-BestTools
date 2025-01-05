@@ -527,6 +527,14 @@ public class BestToolsUtils {
         addToMap("YELLOW_CONCRETE", Tool.PICKAXE);
         addToMap("YELLOW_CONCRETE_POWDER", Tool.SHOVEL);
 
+        // SCULK
+        addToMap("SCULK_VEIN", Tool.HOE);
+        addToMap("SCULK_CATALYST", Tool.HOE);
+        addToMap("SCULK", Tool.HOE);
+        addToMap("SCULK_SHRIEKER", Tool.HOE);
+        addToMap("SCULK_SENSOR", Tool.HOE);
+        addToMap("CALIBRATED_SCULK_SENSOR", Tool.HOE);
+
         // 1.17
         try {
             for (Material mat : Material.values()) {
