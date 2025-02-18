@@ -535,6 +535,9 @@ public class BestToolsUtils {
         addToMap("SCULK_SENSOR", Tool.HOE);
         addToMap("CALIBRATED_SCULK_SENSOR", Tool.HOE);
 
+        //地獄疙瘩
+        addToMap("NETHER_WART", Tool.HOE);
+
         // 1.17
         try {
             for (Material mat : Material.values()) {
