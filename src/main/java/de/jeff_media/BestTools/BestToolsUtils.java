@@ -370,6 +370,13 @@ public class BestToolsUtils {
         addToMap("COBBLESTONE_STAIRS", Tool.PICKAXE);
         addToMap("COBWEB", Tool.SHEARS);
         addToMap("COCOA", Tool.AXE);
+        addToMap("CHERRY_BUTTON", Tool.AXE);
+        addToMap("CHERRY_FENCE", Tool.AXE);
+        addToMap("CHERRY_FENCE_GATE", Tool.AXE);
+        addToMap("CHERRY_LEAVES", Tool.SHEARS);
+        addToMap("CHERRY_PRESSURE_PLATE", Tool.AXE);
+        addToMap("CHERRY_SLAB", Tool.AXE);
+        addToMap("CHERRY_STAIRS", Tool.AXE);
         addToMap("CRACKED_STONE_BRICKS", Tool.PICKAXE);
         addToMap("CRAFTING_TABLE", Tool.AXE);
         addToMap("CRYING_OBSIDIAN", Tool.PICKAXE);
