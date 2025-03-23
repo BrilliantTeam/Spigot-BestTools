@@ -384,6 +384,13 @@ public class BestToolsUtils {
         addToMap("DARK_OAK_PRESSURE_PLATE", Tool.AXE);
         addToMap("DARK_OAK_SLAB", Tool.AXE);
         addToMap("DARK_OAK_STAIRS", Tool.AXE);
+        addToMap("CHERRY_BUTTON", Tool.AXE);
+        addToMap("CHERRY_FENCE", Tool.AXE);
+        addToMap("CHERRY_FENCE_GATE", Tool.AXE);
+        addToMap("CHERRY_LEAVES", Tool.SHEARS);
+        addToMap("CHERRY_PRESSURE_PLATE", Tool.AXE);
+        addToMap("CHERRY_SLAB", Tool.AXE);
+        addToMap("CHERRY_STAIRS", Tool.AXE);
         addToMap("DARK_PRISMARINE", Tool.PICKAXE);
         addToMap("DARK_PRISMARINE_SLAB", Tool.PICKAXE);
         addToMap("DARK_PRISMARINE_STAIRS", Tool.PICKAXE);
